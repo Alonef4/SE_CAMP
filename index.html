@@ -1,13 +1,154 @@
 <!DOCTYPE html>
+<meta charset="UTF-8" />
 <html>
     <head>
         <title>My web page</title>
     </head>
     <body>
-        <h1>Hello, world!</h1>
-        <p>This is my first web page.</p>
-        <p>It contains a 
+        <h1>List</h1>
+        <ul>
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+        </ul>
+        <ol type="1">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+        </ol>
+        <dl>
+            <dt> Group A</dt>
+            <dd>A</dd>
+            <dt> Group B</dt>
+            <dd>B</dd>
+            <dd>C</dd>
+        </dl>
+        <h1>Image</h1>
+        <img width="64px" src="data:imagedata:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAHsAcAMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAAAAQQFBgcCA//EADcQAAEDAgMDCgUEAgMAAAAAAAEAAgMEERIhMQVBUQYTFCJSU3GBkaJhodHh8CMyQsEzsQdy8f/EABgBAQEBAQEAAAAAAAAAAAAAAAABAgME/8QAHREBAQADAQEAAwAAAAAAAAAAAAECERIhMQMTQf/aAAwDAQACEQMRAD8A7ihQ+mnu/cjph7v3K81OomIUPpp7v3I6ae79yc06iYhQ+mHu/cjph7v3JzTqJiFD6Ye79yBWHu/cnNOomIULppy/T9yfTD3fuTmnUTEKH0w937kdMPd+5OadRMQofTDb/H7kdMPd+5OadREyQnu1KPMro5ldCPMp+ZRS4+Ce9fOombTwSTSO6jGFxz4BYDb+33TzczA8v0Mkh/aPgxu7x1PyWcrpccbk3E20aWN5jD+ckGrI7G3ib2HmVHfteMMlAY5srGFwa4gh1t12ki651HVyvGUryHa2y8kxVStd+owhvEf2sfsdZ+KOpwyCaGOQA2e24XtcyZyoro5WvjmkwsIFid3hwXQ9mVrNoUUdQxwu4WcAdCt45bc8sOUq6fBIa6p7xmVpgv4hPeUv46p8c0C3fZNLd90/zVAfmiX5onr/AOpOIDCXEBoFyScrKKw3/IO0pBFDBG8iJ4xBrTa+4E+JBt8BfflhoKixIvmNfirjlXUyVu1JHlha1zWczHvEdhgy3XGdviqao2fPS1M8D2kyRmxw56DXJcsva9GE1EuKcNbqmakmO7sioAZJjY0NJBOavqDk9LtDZc1Vzscb7EUrXvDeeI1t/oLLUU7piJpHbjb/AEtJyM2i5lfHFI5wie4BwDrDPLd8SPmskWvaQH3BtmDuVvybewTEyPDBewJ3FajOXx2KwFgLZfBMahBtf7o3j6rs8xZW+ye8pfx+6fH6oEmi2Ry+aLfl0HiTRoOhNio8zWvpZY3DJ8diLcbi2SkvZjbbMaWN9F5jj5toFtBbq5ADwU/rW/GK5QbAdVbZFVKCyOV0Rns4DA39thusAB5kcUn7Lljqj0NtLBTjExrBT3cG5ixfqSdSSfhYrQ1e16V5dHBG6aSN7Q+w/a24ub7wbHS+imtY2SMt1jfnYaG653UrrjcrPGZg5HQONOyNzm0ZIlkc915H9W2EZZA6n5KNBs2bng3m6IUmojdSte4jOwc85nK2d1uB1RoGtHlZRua/TwMJEZBFhayzLJ9au78c85R8nT0mlj2NFJI6pjdIIXu/xgWv1idM96gbC2RUtrhQVtOWSFxuyTiBdt/gSGi/xXT5o4Hc3GXtbIxvVaM3YdNNbLy3ZsclX0x4LZOo2xtfCy5b4Zm58AMlcZumWWonsaWsa0m5DQCeOS9cEj4fNPePquzzFuT4pWyGXzTtmfqgQTRuOZSQC+VTGJqeSNzntDmkYmHMeC+x80t29Fc+npZqo2nm5ukbgcGjqucQ3PEf+11Z00piilDqh8MLXYcAdfTU4db5/wBq+2hsunmpn83HFDK3riUMF7jifVZCinFVTvY2m/WGb3F7hbjkSsyN7WNZtC0FqSme55xO679Wjh/a+s+04sb545HRw4LlsT+sD5b9yqRtGatgbRROgl6AwjD+05jCLk5HLgqSGSKuraeSKJrBYYyHE4jvPwueCQdI2FHajZNIGumlGJ0gzJBzAJ14Ky0UXZrDHSsjs4YQB6ABSirGL9Ce8JJ7wqFuT4pfx3p7yiF+aJpbvun9ECv+WRdNJFUPKTa8dMw0LZDFLM2xlLcmeelyqWTZ5fyWfLWzh8pqecje0WxAZa8P3HyC1dXsunq5HPmxEOHWbfXIfRfaooqeppRSyRNMNgGtta3Cyml3GF5I7UoNmPrenkiR+AMIZftfUKmIp3bTeYW2p+ddhbwaTl52sobWtmmliJPOMa+WQ4bWwDEcvJaPkPDS122HyFokEUBJa9twDcWy46rHu2/NN3s+UT0UEwGEvYCQRv3qQUcEaLo5i6e8fRK/5dMahAtw+ifFLcE95RCvluTPknhf2T6Iwu7LkHm6PJesLuyfRLA/sn0RRxy3I4ZJ4Hdk6cEYXdg+iDNzcjtnS1VVU89VMkqWua7A9tmh2tst+Y81O2FsGj2GJOiGVzpLYnyOBNh4AK2wu7J9EBruyfRNo88Ez5Iwuy6p9E8LuyfRAkDUaJ4Xdk+iMLsuqUV5/inx0Rhdb9p9E8Ls+o5EWqEIXJ1CEIQCEIQCEIQCEIQCEIQCEIQf/9k=">
+
+        <h1>Table</h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <td>#</td>
+                    <td>Name Head</td>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <td>#</td>
+                    <td>Name Foot</td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>B</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <h1>Form</h1>
+        <form action="#">
+            <table>
+                <tr>
+                    <td>input text</td>
+                    <td>
+                        <input type="text"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>input date</td>
+                    <td>
+                        <input type="datetime"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>input datetime</td>
+                    <td>
+                        <input type="datetime-local"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>input radio</td>
+                    <td>
+                        <input  id="radio_a"
+                                type="radio"
+                                name="same_radio"/>
+                        <label for="radio_a">Radio A</label>
+                        <input  id="radio_b"
+                                type="radio"
+                                name="same_radio"/>
+                        <label for="radio_a">Radio B</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>input checkbox</td>
+                    <td>
+                        <input type="checkbox">Checkbox A
+                    <br>
+                        <input type="checkbox">Checkbox B
+                    </td>
+                </tr>
+                <tr>
+                    <td>text area</td>
+                    <td><textarea rows="4"placeholder=กรุณาป้อนข้อมูล></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        select
+                        
+                    </td>
+                    <td>
+                        <select>
+                            <option value="" disabled selected>-</option>
+                            <option>A</option>
+                            <option>B</option>
+                        </select>
+                    </td>
+                   
+                </tr>
+            </table>
+            
+    
+        </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- <form>
+            <label for="fname">ชื่อ</label>
+            <input type="text" id="fname" name="fname"><br>
+            <br>
+            <label for="lname">สกุล</label>
+            <input type="text" id="lname" name="lname"><br>
+        </form>
+        <p>สกุล</p>
+        <p>วัน/เดือน/ปีเกิด</p>
+        <p>อายุ</p>
+        <p>เพศ</p>
+        <p>รูป</p>
+        <p>ที่อยู่</p>
+        <p>สีที่ชอบ</p>
+        <p>แนวเพลงที่ชอบ</p> -->
+        <!-- <p>It contains a 
              <strong>main heading</strong> and <em> paragraph </em>.
-        </p>
+        </p> -->
     </body>
 </html>
