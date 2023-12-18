@@ -19,7 +19,7 @@ h1{
 }
 
 #myP{
-    font-size: 48pt;
+    font-size: 16pt;
 }
 
 .box{
@@ -27,14 +27,27 @@ h1{
     height: 400px;
     color: rgba(255, 255, 255);
     background-color: rgb(88, 90, 88);
-    text-align: center;
     border: 5px dashed rgb(0, 255, 0);
     padding-top: 10px;
     margin: 50px 25px;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* ไอเดียเพิ่มเติม */
+    transition: background-color 0.5s ease-in-out;
+    animation: changeColor 5s infinite linear; /* เพิ่ม animation เพื่อเปลี่ยนสีโดยต่อเนื่อง */
 }
 
+
+
 .box:hover{
-    background-color: rgb(117, 89, 126);
+    background-color: rgb(118, 11, 82);
+    box-shadow: 15px 15px 10px 15px rgba(0, 0, 0, 0.5);
+
+    /* ไอเดียเพิ่มเติม */
+    animation: none; /* ยกเลิก animation เมื่อโฮเวอร์ */
 }
 
 .a{
@@ -43,4 +56,22 @@ h1{
 
 .a:link{
     color: #00a2ff;
+}
+
+@keyframes changeColor {
+    0% {
+        background-color: rgb(88, 90, 88);
+    }
+    25% {
+        background-color: rgb(100, 50, 150);
+    }
+    50% {
+        background-color: rgb(50, 150, 100);
+    }
+    75% {
+        background-color: rgb(200, 100, 50);
+    }
+    100% {
+        background-color: rgb(88, 90, 88);
+    }
 }
