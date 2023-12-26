@@ -15,7 +15,8 @@
 
   <table>
     <tbody>
-      <?php for ($i = 1; $i <= 12; $i++) { ?>
+      
+      <?php for ($i = 1; $i <= 24; $i++) { ?>
         <tr>
           <td><?php echo $multi_x ?></td>
           <td>x</td>
@@ -27,13 +28,13 @@
     </tbody>
   </table>
 
-  <style>
-    table {
-      width: 150px;
-      height: 265px;
-      overflow-y: scroll;
-    }
-  </style>
+    <style>
+      table {
+        width: 150px;
+        height: 265px;
+        overflow-y: scroll;
+      }
+    </style>
 </body>
 
 </html>
