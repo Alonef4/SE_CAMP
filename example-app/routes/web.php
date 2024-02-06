@@ -1,4 +1,5 @@
 <?php
+
 use App\Http\Controllers\C_titles;
 use App\Http\Controllers\MyAuth;
 use App\Http\Controllers\MyController;
@@ -27,9 +28,6 @@ Route::resource('titles', C_titles::class)->middleware('auth');
 Route::middleware('auth')->group(function(){
     // auth first
 });
-
-Route::resource('titles', C_titles::class);
-
 Route::get('/my-controller', [MyController::class, 'index']);
 
 Route::get('/my-controller2', 'App\Http\Controllers\MyController@index');
@@ -59,21 +57,4 @@ Route::get('/my-route', function(){
 Route::post('/my-route', function(Request $req){
     $data['myinput'] =  $req->input('myinput');
     return view('myroute', $data);
-});
-
-///
-
-Route::get('/multiplication-table', function () {
-    return view('multiplication-form');
-});
-
-Route::post('/show-multiplication-table', function(Request $request){
-    $number = $request->input('number');
-    $multiplication_table = [];
-
-    for ($i = 1; $i <= 12; $i++) {
-        $multiplication_table[$i] = $number * $i;
-    }
-
-    return view('multiplication-table', ['number' => $number, 'table' => $multiplication_table]);
 });

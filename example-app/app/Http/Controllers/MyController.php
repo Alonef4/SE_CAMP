@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 class MyController extends Controller
 {
     private $myvar = "Hello World!";
@@ -14,10 +13,6 @@ class MyController extends Controller
     }
 
     public function index(){
-        // $data = ['val_a' => 'Hello World!'];
-        // $data['val_b'] = "Laravel";
-        // return view('myfolder.mypage',$data);
-        // echo $this->myvar;
         return view('home');
     }
 
