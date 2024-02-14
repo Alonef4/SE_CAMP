@@ -1,32 +1,69 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>Javascript 101</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตารางสูตรคูณ🧮</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 40px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 25%;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        input {
+            padding: 5px;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Before</h1>
-    <h1 id="myh1">
-        <h1>Prepend</h1>Javascript<h1>Append</h1>
-    </h1>
-    <h1>After</h1>
-    <button onclick="alert('Hello World!')">Click Me!</button>
-    <input type="text" id="my_number" value="10">
-    <button onclick="myFunction()">submit number</button>
+    <h1>ตารางสูตรคูณ🧮</h1>
+    <label for="my_number">กรอกตัวเลข:</label>
+    <input type="number" id="my_number" value="10">
+    <button onclick="generateTable()">สร้างตาราง</button>
     <br>
-    <button onclick="myFunction2()">submit my function2</button>
-    <br>
-    <table id="my_table">
+    <table>
         <thead>
             <tr>
-                <td>#</td>
-                <td>result</td>
+                <th>ตัวคูณ</th>
+                <th>ผลลัพธ์</th>
             </tr>
         </thead>
-        <tbody id="my_tbody">
-
-        </tbody>
+        <tbody id="my_tbody"></tbody>
     </table>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
@@ -36,73 +73,17 @@
             console.log($('#my_number').val())
             $('#myh1').text("Javascript 101")
             $('#my_number').val(100)
-            // setInterval(() => {
-            //     $('#myh1').after(`<h1 class="my_gen_number">setInterval</h1>`)
-            // }, 2000);
         });
 
-        function myFunction2() {
-            // $($('#my_table').children()[1]).html("<tr><td>1</td><td>test</td></tr>")
+        function generateTable() {
             let my_number = parseInt($('#my_number').val())
             let my_code_tr = ``
-            for (let i = 0; i < my_number; i++) {
-                my_code_tr += `<tr><td>${i}</td><td>test</td></tr>`
+            for (let i = 1; i <= 12; i++) {
+                let result = i * my_number;
+                my_code_tr += `<tr><td>${i}</td><td>${my_number} x ${i} = ${result}</td></tr>`
             }
             $('#my_tbody').html(my_code_tr)
         }
-
-        function myFunction() {
-            let my_number = parseInt($('#my_number').val())
-            for (let i = 0; i < my_number; i++) {
-                $('#myh1').after(`<h1 class="my_gen_number">${i}</h1>`)
-            }
-            console.log(document.getElementById('my_number').value);
-            console.log('Click submit number')
-
-            setTimeout(function() {
-                $('.my_gen_number').each(function(index, val) {
-                    $(val).remove();
-                    //val.remove()
-                })
-            }, 2000);
-
-        }
-        console.log("Hello World!")
-        let myval;
-        console.log(typeof myval);
-        myval = '10';
-        myval2 = '2';
-        console.log(myval, myval2);
-        myval3 = parseInt(myval) + myval2;
-        console.log(myval3)
-        myval3 = myval - myval2;
-        console.log(myval3)
-        myval3 = myval * myval2;
-        console.log(myval3)
-        myval3 = myval / myval2;
-        console.log(myval3)
-    </script>
-    <script>
-        let myval4 = [1, 2, 3, 4];
-
-        myval4[5] = 5;
-        myval4[6] = [6, 5, 4, 5]
-        console.log(myval4)
-
-        for (i = 0; i < myval4.length; i++) {
-            console.log("in for", myval4[i])
-        }
-        myval4.forEach(function(value, index) {
-            console.log("in forEach", value, index)
-        });
-
-        console.log(document.getElementById('myh1').innerHTML)
-        /*
-        // php
-        foreach($myval4 as $index => $value){
-
-        }
-        */
     </script>
 </body>
 
